@@ -1,5 +1,11 @@
 <?php
-class movie {};
+class movie
+{
+    public $title;
+    public $date;
+    public $poster;
+    public $trama;
+};
 
 $matrix = new movie();
 $scary_movie = new movie();
