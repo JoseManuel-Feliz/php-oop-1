@@ -140,5 +140,3 @@ $movie4->setCritc();
 
 // SET INSTANCE METHOD
 $movie5->setCritc();
-
-var_dump($movie1);
