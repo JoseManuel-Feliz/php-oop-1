@@ -17,26 +17,37 @@ require __DIR__ . "/db/MoviesClass.php";
         <ul>
             <?php foreach ($Movies as $Movie) { ?>
                 <li>
-                    <?= 'src="' . $Movie->poster . '"' . 'alt="' . $Movie->title  . ' Poster "' ?>>
+                    <img <?= 'src="' . $Movie->poster . '"' . 'alt="' . $Movie->title  . ' Poster "' ?>>
 
                     <p>
+                        Title:
                         <?= $Movie->title ?>
                     </p>
                     <p>
+                        Release date:
                         <?= $Movie->date ?>
                     </p>
                     <p>
+                        Plot:
                         <?= $Movie->plot ?>
                     </p>
                     <p>
+                        Rating:
                         <?= $Movie->vote ?>
                     </p>
                     <p>
+                        Critics Rating:
                         <?= $Movie->critic ?>
                     </p>
-                    <p>
-                        <?= $Movie->genre ?>
-                    </p>
+
+                    <div>
+                        Genres:
+                        <?php foreach ($Movie->genre as $single_genre) { ?>
+                            <span>
+                                <?= $single_genre ?>
+                            </span>
+                        <?php } ?>
+                    </div>
                 </li>
             <?php } ?>
         </ul>
