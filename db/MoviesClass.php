@@ -7,7 +7,7 @@ class movie
     public string $plot;
     public int $vote;
     public string $critic;
-    public string $genre;
+    public array $genre;
 
     public function setCritc()
     {
@@ -68,7 +68,7 @@ $movie1 = new movie(
     "https://upload.wikimedia.org/wikipedia/en/c/c1/The_Matrix_Poster.jpg",
     "When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate deception of an evil cyber-intelligence.",
     9,
-    "Action",
+    ["Action", "Sci-Fi"],
 
 );
 
@@ -80,7 +80,7 @@ $movie2 = new movie(
     "https://upload.wikimedia.org/wikipedia/en/2/29/Movie_poster_for_%22Scary_Movie%22.jpg",
     "A year after disposing of the body of a man they accidentally killed, a group of dumb teenagers are stalked by a bumbling serial killer.",
     6,
-    "Comedy",
+    ["Comedy", "Parody"],
 );
 
 
@@ -91,7 +91,7 @@ $movie3 = new movie(
     "https://upload.wikimedia.org/wikipedia/en/d/df/I_am_legend_teaser.jpg",
     "Years after a plague kills most of humanity and transforms the rest into monsters, the sole survivor in New York City struggles valiantly to find a cure.",
     7,
-    "Survival",
+    ["Survival", "Action", "Sci-Fi"],
 );
 
 
@@ -102,7 +102,7 @@ $movie4 = new movie(
     "https://upload.wikimedia.org/wikipedia/en/b/b6/Jumanji_poster.jpg",
     "When two kids find and play a magical board game, they release a man trapped in it for decades - and a host of dangers that can only be stopped by finishing the game.",
     7,
-    "Adventure",
+    ["Adventure", "Fantasy", "Comedy"],
 );
 
 
@@ -113,8 +113,17 @@ $movie5 = new movie(
     "https://upload.wikimedia.org/wikipedia/en/a/a6/Raiders_of_the_Lost_Ark_Theatrical_Poster.jpg",
     "In 1936, archaeologists and adventurers of the U.S. government hired Indiana Jones to find the Ark of the Covenant before the Nazis could obtain its extraordinary powers.",
     8,
-    "Adventure",
+    ["Adventure", "Action"],
 );
+
+$Movies =
+    [
+        $movie1,
+        $movie2,
+        $movie3,
+        $movie4,
+        $movie5,
+    ];
 
 
 // SET INSTANCE METHOD
